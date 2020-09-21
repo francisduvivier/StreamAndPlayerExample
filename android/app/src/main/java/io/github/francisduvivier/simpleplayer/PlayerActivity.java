@@ -32,7 +32,7 @@ public class PlayerActivity extends Activity {
         }
         SimpleExoPlayer.Builder playerBuilder = new SimpleExoPlayer.Builder(this);
         player = playerBuilder.build();
-        MediaItem mediaItem = new MediaItem.Builder().setMimeType(MimeTypes.APPLICATION_MPD).setUri(sourceUri).build();
+        MediaItem mediaItem = MediaItem.fromUri(sourceUri);
         player.setMediaItem(mediaItem);
         player.prepare();
     }
