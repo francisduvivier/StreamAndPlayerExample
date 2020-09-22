@@ -35,6 +35,7 @@ public class PlayerActivity extends Activity {
         MediaItem mediaItem = MediaItem.fromUri(sourceUri);
         player.setMediaItem(mediaItem);
         player.prepare();
+        player.setPlayWhenReady(true);
     }
 
     @Override
